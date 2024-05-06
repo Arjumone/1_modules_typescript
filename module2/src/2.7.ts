@@ -1,0 +1,31 @@
+{
+    //generic constraint with keyof operator
+    type Vehicle ={
+        bike:string;
+        car:string;
+        ship:string;
+    }
+
+    type Owner = 'bike'|'car'|'ship'; //manually
+    
+    type Owner2= keyof Vehicle;
+    
+    const getPropertyValue=<X,Y extends keyof X>(obj:X,key:Y)=>{
+        return obj[key];
+    }
+
+    const user = {
+        name:'arju',
+        age:10,
+        address:'ctg'
+    }
+
+    const res = getPropertyValue(user,'name')
+
+
+
+
+
+
+    //
+}

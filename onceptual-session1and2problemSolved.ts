@@ -8,7 +8,7 @@ function sumArray(numbers: number[]): number {
   }
   const numbersA: number[] = [1, 2, 3, 4, 5];
   const result2: number = sumArray(numbersA);
-  console.log(result); // Output: 15
+  console.log(result2); // Output: 15
   
   // 2. Define an interface called Person that has the following properties: name (string), age (number), and email (string). Create an object based on this interface and print out its properties.
   interface IPerson {
@@ -36,14 +36,14 @@ function sumArray(numbers: number[]): number {
   console.log(area); // Output: 50
   
   // 4. Implement a generic function called reverseArray that takes an array of any type and returns the reversed version of the array. Test it with different types of arrays (e.g., numbers, strings) to ensure it works correctly.
-  function reverseArray<T>(array: T[]): T[] {
+  function reverseArray2<T>(array: T[]): T[] {
     return array.reverse();
   }
   const numberArr: number[] = [1, 2, 3, 4, 5];
-  console.log(reverseArray(numberArr)); // Output: [5, 4, 3, 2, 1]
+  console.log(reverseArray2(numberArr)); // Output: [5, 4, 3, 2, 1]
   
-  const strings: string[] = ["apple", "banana", "cherry"];
-  console.log(reverseArray(strings)); // Output: ["cherry", "banana", "apple"]
+  const stringss: string[] = ["apple", "banana", "cherry"];
+  console.log(reverseArray2(stringss)); // Output: ["cherry", "banana", "apple"]
   
   //5. Create a generic interface called Repository that represents a generic data repository. It should have methods like getAll, getById, create, update, and delete. Define the types for the methods and create a class that implements this interface.
   interface Repository<T> {
@@ -210,41 +210,42 @@ function sumArray(numbers: number[]): number {
   console.log(circle.calculateArea()); // Output: 28.274333882308138
   
   // 9. Define two interfaces: Car with properties like make, model, and year, and Driver with properties like name and licenseNumber. Create a function that takes objects of type Car and Driver and returns an object with the combined properties of both types.
-  interface Car {
+  interface Car2 {
     make: string;
     model: string;
     year: number;
-  }
-  
-  interface Driver {
+}
+
+interface Driver {
     name: string;
     licenseNumber: string;
-  }
-  
-  function combineCarAndDriver(
-    car: Car,
+}
+
+function combineCar2AndDriver(
+    car2: Car2,
     driver: Driver
-  ): { car: Car; driver: Driver } {
+): { car2: Car2; driver: Driver } {
     return {
-      car: car,
-      driver: driver,
+        car2: car2,
+        driver: driver,
     };
-  }
-  
-  // Example usage
-  const myCar2: Car = {
+}
+
+// Example usage
+const myCar22: Car2 = {
     make: "Toyota",
     model: "Camry",
     year: 2022,
-  };
-  
-  const myDriver: Driver = {
+};
+
+const myDriver: Driver = {
     name: "John Doe",
     licenseNumber: "ABC123",
-  };
-  
-  const combinedData = combineCarAndDriver(myCar2, myDriver);
-  console.log(combinedData);
+};
+
+const combinedData = combineCar2AndDriver(myCar22, myDriver);
+console.log(combinedData);
+
   
   // 10. Create a function that takes a parameter which can be either a string or an array of strings. If it's a string, return the uppercase version of the string. If it's an array of strings, return an array with each string in uppercase.
   function convertToUppercase(input: string | string[]): string | string[] {

@@ -39,8 +39,8 @@ function reverseArray<T>(array: T[]): T[] {
   return array.reverse();
 }
 
-const reversArray = reverseArray(["apple", "banana", "cherry"]);
-console.log(reversArray);
+const reversArray2 = reverseArray(["apple", "banana", "cherry"]);
+console.log(reversArray2);
 const reversNumber = reverseArray([10, 20, 30]);
 console.log(reversNumber);
 
